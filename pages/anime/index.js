@@ -1,18 +1,17 @@
 import React from "react";
 import axios from "axios";
 import dateFormat from "dateformat";
-import * as Components from "../../Components";
 import { serverAnime } from "../../config";
+import { Meta, MovieCard } from "../../Components";
 
 const AnimeAll = ({ anime, animeAll }) => {
   return (
     <>
-      <Components.Nav />
-      <Components.Meta title="Anime" />
+      <Meta title="Anime" />
       <div className="bg-blue-300 w-full mx-auto py-10 sm:px-20 md:px-20 lg:px-40 ">
         <div className=" grid gap-5  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {anime.data.map(data => (
-            <Components.MovieCard
+            <MovieCard
               key={data.id}
               link={`/anime/trending/${data.id}`}
               img={data.attributes.posterImage.large}
@@ -22,7 +21,7 @@ const AnimeAll = ({ anime, animeAll }) => {
             />
           ))}
           {animeAll.data.map(data => (
-            <Components.MovieCard
+            <MovieCard
               key={data.id}
               link={`/anime/popular/${data.id}`}
               img={data.attributes.posterImage.large}

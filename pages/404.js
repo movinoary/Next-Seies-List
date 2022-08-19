@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import * as Components from "../Components";
+import { Meta } from "../Components";
+
 const NotFound = () => {
   const router = useRouter();
 
@@ -16,7 +17,7 @@ const NotFound = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center mt-60">
-        <Components.Meta title="Page not found" />
+        <Meta title="Page not found" />
         <h1 className="font-bold text-blue-600 text-9xl">404</h1>
         <h6 className="text-5xl font-bold text-gray-600">
           <span className="text-red-500">Oops!</span> Page not found

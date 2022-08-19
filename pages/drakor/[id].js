@@ -2,13 +2,12 @@ import React from "react";
 import axios from "axios";
 import Image from "next/image";
 import { serverDrakor } from "../../config";
-import * as Components from "../../Components";
+import { CastCard, DetailCard, Meta, VideoCard } from "../../Components";
 
 const DrakorDetail = ({ drama, cast, video }) => {
   return (
     <>
-      <Components.Nav />
-      <Components.Meta title={drama.name} />
+      <Meta title={drama.name} />
       <div className="container max-w-4xl mx-auto pt-6">
         <Image
           src={`https://image.tmdb.org/t/p/original${drama.backdrop_path}`}
@@ -38,13 +37,13 @@ const DrakorDetail = ({ drama, cast, video }) => {
             <p className="text-gray-600 text-sm mt-4 italic">{drama.tagline}</p>
           ) : null}
           <p className="text-gray-600 text-sm mt-4">{drama.overview}</p>
-          <Components.DetailCard item={drama} />
+          <DetailCard item={drama} />
           <h1 className="text-3xl mt-10 bold border-b-2 border-gray-500">
             Cast
           </h1>
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-5">
             {cast.cast.map(data => (
-              <Components.CastCard item={data} key={data.id} />
+              <CastCard item={data} key={data.id} />
             ))}
           </div>
           <div>
@@ -55,7 +54,7 @@ const DrakorDetail = ({ drama, cast, video }) => {
               {video.length !== 0 ? (
                 <>
                   {video.map(data => (
-                    <Components.VideoCard key={data.id} data={data} />
+                    <VideoCard key={data.id} data={data} />
                   ))}
                 </>
               ) : (

@@ -2,15 +2,14 @@ import axios from "axios";
 import React from "react";
 import Image from "next/image";
 import { serverAnime } from "../../../config";
-import * as Components from "../../../Components";
+import { Meta } from "../../../Components";
 
 const AnimeDetail = ({ anime }) => {
   const data = anime.data.attributes;
 
   return (
     <>
-      <Components.Nav />
-      <Components.Meta title={data.canonicalTitle} />
+      <Meta title={data.canonicalTitle} />
       <div className="container max-w-4xl mx-auto pt-6">
         <Image
           src={data.coverImage.large}

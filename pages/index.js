@@ -1,19 +1,18 @@
 import axios from "axios";
 import { serverAnime, serverDrakor } from "../config";
 import dateFormat from "dateformat";
-import * as Components from "../Components";
+import { MovieCard } from "../Components";
 
 export default function Home({ drakor, anime }) {
   return (
     <>
-      <Components.Nav />
       <div className="bg-blue-300 w-full mx-auto py-10 sm:px-20 md:px-20 lg:px-40 ">
         <h1 className="text-3xl mt-5 mb-10 border-b-2 text-white">
           Drama Korea
         </h1>
         <div className=" grid gap-5  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {drakor.items.map(data => (
-            <Components.MovieCard
+            <MovieCard
               key={data.id}
               link={`/drakor/${data.id}`}
               img={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
@@ -28,7 +27,7 @@ export default function Home({ drakor, anime }) {
         <h1 className="text-3xl mt-5 mb-10 border-b-2 text-white">Anime</h1>
         <div className=" grid gap-5  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {anime.data.map(data => (
-            <Components.MovieCard
+            <MovieCard
               key={data.id}
               link={`/anime/trending/${data.id}`}
               img={data.attributes.posterImage.large}
