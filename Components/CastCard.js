@@ -3,7 +3,7 @@ import React from "react";
 
 const CastCard = ({ item }) => {
   return (
-    <div className="flex flex-col justify-center  overflow-hidden items-center bg-blue-300 rounded-lg">
+    <div className="flex flex-col justify-center  overflow-hidden items-center bg-blue-300 rounded-md">
       <div className="rounded-md -mt-5"></div>
       <Image
         src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}
