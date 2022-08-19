@@ -15,8 +15,8 @@ const Meta = ({ keywords, description, title }) => {
 };
 
 Meta.defaultProps = {
-  title: "VOMOVie",
-  keywords: "Movie List App",
+  title: "VOSeriesList",
+  keywords: "Series List App",
   description: "watch Movie for free",
 };
 

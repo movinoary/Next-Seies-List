@@ -29,7 +29,7 @@ export default function Home({ drakor, anime }) {
           {anime.data.map(data => (
             <Components.MovieCard
               key={data.id}
-              link={`/anime/popular/${data.id}`}
+              link={`/anime/trending/${data.id}`}
               img={data.attributes.posterImage.large}
               title={data.attributes.slug}
               subTitle={data.attributes.ageRatingGuide}
