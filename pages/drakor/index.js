@@ -31,7 +31,7 @@ export default Drakor;
 
 export async function getStaticProps() {
   const res = await axios(
-    `${serverDrakor}list/8214019?api_key=9f22c743b4f150fea0af41e0d6b5bed0`
+    `${serverDrakor}list/8214019?api_key=${process.env.API_KEY}`
   );
   const drakor = res.data;
 

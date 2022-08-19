@@ -44,7 +44,7 @@ export default function Home({ drakor, anime }) {
 
 export async function getStaticProps() {
   const res = await axios(
-    `${serverDrakor}list/8214210?api_key=9f22c743b4f150fea0af41e0d6b5bed0`
+    `${serverDrakor}list/8214210?api_key=${process.env.API_KEY}`
   );
   const response = await axios(`${serverAnime}trending/anime`);
 
