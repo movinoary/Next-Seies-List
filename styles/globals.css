@@ -47,12 +47,19 @@
   overflow: hidden;
 }
 .movie_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  justify-content: center;
+  height: 150px;
+  margin-top: -50px;
   border-radius: 7px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
 }
 .movie_desc h1 {
+  margin-top: 50px;
   font-size: 1.2rem;
 }
 .movie_desc h2 {

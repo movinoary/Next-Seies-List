@@ -15,9 +15,9 @@ const Meta = ({ keywords, description, title }) => {
 };
 
 Meta.defaultProps = {
-  title: "VOSeriesList",
-  keywords: "Series List App",
-  description: "watch Movie for free",
+  title: "VOWatch",
+  keywords: "Series TV List App",
+  description: "watch TV Series for free",
 };
 
 export default Meta;

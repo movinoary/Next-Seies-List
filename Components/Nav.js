@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="nav">
       <h1 className="nav_title">
-        VO<span>Series</span>List
+        VOW<span>atch</span>
       </h1>
       <div className="nav_menu">
         <Link href="/">
