@@ -3,7 +3,7 @@ import YouTube from "react-youtube";
 
 const VideoCard = ({ data }) => {
   const opts = {
-    height: "100%",
+    height: "400",
     width: "100%",
     playerVars: {
       autoplay: 1,
@@ -12,7 +12,7 @@ const VideoCard = ({ data }) => {
 
   return (
     <YouTube
-      className="mt-5 h-96"
+      className="mt-5"
       videoId={data.key}
       opts={opts}
       onReady={e => e.target.pauseVideo()}
