@@ -6,18 +6,29 @@ import * as Components from "../../../Components";
 
 const AnimeDetail = ({ anime }) => {
   const data = anime.data.attributes;
+  console.log(anime);
 
   return (
     <>
       <Components.Meta title={data.canonicalTitle} />
       <div className="container max-w-4xl mx-auto pt-6">
-        <Image
-          src={data.coverImage.large}
-          width={1000}
-          height={600}
-          className="rounded-md"
-          alt={data.canonicalTitle}
-        />
+        {data.coverImage ? (
+          <Image
+            src={data.coverImage.large}
+            width={1000}
+            height={600}
+            className="rounded-md"
+            alt={data.canonicalTitle}
+          />
+        ) : (
+          <Image
+            src={data.posterImage.large}
+            width={1000}
+            height={600}
+            className="rounded-md"
+            alt={data.canonicalTitle}
+          />
+        )}
         <div className="px-10 ">
           <div className="-mt-60 ">
             <Image
