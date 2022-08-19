@@ -10,6 +10,7 @@ const AnimeDetail = ({ anime }) => {
 
   return (
     <>
+      <Components.Nav />
       <Components.Meta title={data.canonicalTitle} />
       <div className="container max-w-4xl mx-auto pt-6">
         {data.coverImage ? (

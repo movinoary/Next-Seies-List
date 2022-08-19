@@ -6,6 +6,7 @@ import * as Components from "../Components";
 export default function Home({ drakor, anime }) {
   return (
     <>
+      <Components.Nav />
       <div className="bg-blue-300 w-full mx-auto py-10 sm:px-20 md:px-20 lg:px-40 ">
         <h1 className="text-3xl mt-5 mb-10 border-b-2 text-white">
           Drama Korea

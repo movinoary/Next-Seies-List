@@ -6,6 +6,7 @@ import * as Components from "../../Components";
 const Drakor = ({ drakor }) => {
   return (
     <>
+      <Components.Nav />
       <Components.Meta title="Drakor" />
       <div className="bg-blue-300 w-full mx-auto py-10 sm:px-20 md:px-20 lg:px-40 ">
         <div className=" grid gap-5  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">

@@ -7,6 +7,7 @@ import * as Components from "../../Components";
 const DrakorDetail = ({ drama, cast, video }) => {
   return (
     <>
+      <Components.Nav />
       <Components.Meta title={drama.name} />
       <div className="container max-w-4xl mx-auto pt-6">
         <Image
