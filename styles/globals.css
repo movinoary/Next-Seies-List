@@ -1,3 +1,102 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7rem;
+}
+
+.nav_title {
+  font-size: 1.8rem;
+  color: #93c5fd;
+  font-weight: 600;
+  cursor: default;
+}
+
+.nav_title span {
+  color: #4b5563;
+}
+
+.nav_menu {
+  display: flex;
+  gap: 20px;
+  font-size: 1.3rem;
+  color: #4b5563;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.nav_menu p:hover {
+  color: #93c5fd;
+  transition: 0.3s all ease;
+}
+
+.movie_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.movie_image {
+  width: 75%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.movie_desc {
+  text-align: center;
+  border-radius: 7px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.movie_desc h1 {
+  font-size: 1.2rem;
+}
+.movie_desc h2 {
+  font-size: 1rem;
+  color: #4b5563;
+}
+.movie_desc p {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  cursor: default;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.footer p span {
+  color: #93c5fd;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+  z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #93c5fd;
+  border-radius: 10px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4b5563;
+}

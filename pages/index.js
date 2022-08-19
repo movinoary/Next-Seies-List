@@ -1,7 +1,7 @@
 import axios from "axios";
 import { serverAnime, serverDrakor } from "../config";
 import dateFormat from "dateformat";
-import { MovieCard } from "../Components";
+import { Header, MovieCard } from "../Components";
 
 export default function Home({ drakor, anime }) {
   return (

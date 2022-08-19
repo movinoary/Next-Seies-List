@@ -7,10 +7,12 @@ import ListParagraf from "./Sub/ListParagraf";
 import DetailCard from "./DetailCard";
 import CastCard from "./CastCard";
 import VideoCard from "./VideoCard";
+import Header from "./Header";
 
 export {
   Meta,
   Nav,
+  Header,
   Footer,
   Layout,
   MovieCard,

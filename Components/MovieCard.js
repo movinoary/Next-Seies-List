@@ -5,8 +5,8 @@ import React from "react";
 const MovieCard = ({ link, img, title, subTitle, date }) => {
   return (
     <Link href={link}>
-      <div className=" rounded-md  my-10 h-full cursor-pointer">
-        <div className="-mt-11 w-9/12 rounded-md overflow-hidden mx-auto shadow-xl hover:-mt-9 transition-all ">
+      <div className="movie_card">
+        <div className="movie_image">
           <Image
             src={img}
             alt={title}
@@ -16,8 +16,8 @@ const MovieCard = ({ link, img, title, subTitle, date }) => {
             priority="lazy"
           />
         </div>
-        <div className=" text-center mt-3 bg-white/70 rounded-md py-2">
-          <h1 className="text-xl ">{title}</h1>
+        <div className="movie_desc">
+          <h1>{title}</h1>
           <h2>{subTitle}</h2>
           <p> Release :{date}</p>
         </div>
